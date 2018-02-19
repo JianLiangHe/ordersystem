@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcdonald title</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<style rel="stylesheet" type="text/css">
+		* {margin: 0;}
+		
+		.content {width: 100%; height: 400px; border: 1px solid black;}
+		.float-left {float: left;}
+		.content .content-left {width: 20%; height: 100%;}
+		.content .content-right {width: 80%; height: 100%; background: gray;}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<!-- 内容左边部分开始 -->
+		<div class="content-left float-left">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							   href="#collapseOne">
+							   用户管理
+							</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul>
+								<li><a href="">新增用户</a></li>
+								<li><a href="">用户列表</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							   href="#collapseTwo">
+								食品类型管理
+							</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul>
+								<li><a href="">新增类型</a></li>
+								<li><a href="">类型列表</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							   href="#collapseThree">
+								优惠管理
+							</a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul>
+								<li><a href="">新增优惠</a></li>
+								<li><a href="">优惠列表</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 内容左边部分结束 -->
+		
+		<!-- 内容右边部分开始 -->
+		<div class="content-right float-left">
+			
+		</div>
+		<!-- 内容右边部分结束 -->
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+	
+
+</script>

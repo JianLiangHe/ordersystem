@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper用于映射dao的接口，namespace指定Dao接口的完整类名 -->
+<mapper namespace="edu.ordersystem.dao.UserDao">
+
+    <!-- 建立用户映射 -->
+    <resultMap id="userMap" type="user">
+        <id column="user_no" property="no"/>
+        <result column="user_account" property="account"/>
+        <result column="user_password" property="password"/>
+        <result column="user_privilege" property="privilege"/>
+        <result column="user_createtime" property="createtime"/>
+        <result column="user_status" property="status"/>
+    </resultMap>
+
+</mapper>

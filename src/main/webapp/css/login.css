@@ -1,0 +1,18 @@
+* {margin: 0;}
+
+/* 登陆主盒子 */
+.login {width: 600px; height: 450px; margin: 0 auto;}
+
+/* 登陆内容 */
+.login .login-content {width: 400px; height: 350px; background: white; margin: 0 auto; margin-top: 20px; border-radius: 6px; box-shadow: 0px 0px 20px #000;}
+.login .login-content .login-content-title {padding-top: 60px;}
+.login-content .login-content-title span {font-size: 26px; font-weight: bold; display: block; text-align: center;}
+.login .login-content .login-content-input {padding-top: 30px;}
+.login-content .login-content-input .input-tip {color: red;} 
+.login-content .login-content-input .input-box {width: 254px; margin: 0 auto;}
+.login-content-input .input-box input {margin: 2px; height: 40px; border-radius: 6px; outline: none;}
+.login-content-input .input-box .input-txt {width: 250px; padding-left: 30px; border: 1px solid gray;}
+
+/* 登陆按钮 */
+.login-content-input .input-box .input-submit-btn {width: 250px; background: red; color: white; font-size: 20px; letter-spacing: 8px; border: none;}
+.login-content-input .input-box .input-submit-btn:hover {box-shadow: 0px 0px 4px #000;}

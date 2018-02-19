@@ -1,0 +1,33 @@
+/*
+创建用户表 (ordersystem_user)
+1. 编号
+2. 工号
+3. 密码
+4. 权限
+5. 创建时间
+6. 状态
+*/
+drop table if exists ordersystem_user;
+
+create table ordersystem_user(
+user_no int primary key auto_increment,
+user_account varchar(20) not null default '',
+user_password varchar(20) not null default '',
+user_privilege int not null default 0,
+user_createtime timestamp not null default current_timestamp,
+user_status int not null default 1
+)engine=innodb charset=utf8;
+
+--修改工号字段属性
+alter table ordersystem_user modify user_account varchar(20) unique not null;  
+--给工号字段增加长度范围约束
+alter table ordersystem_user add constraint ck_account 
+check(length(user_account)>=6 && length(user_account)<=12);
+
+--插入数据
+insert into ordersystem_user(user_account,user_password,user_privilege,user_createtime,user_status)
+values('admins','admins',2,default,1);
+insert into ordersystem_user(user_account,user_password,user_privilege,user_createtime,user_status)
+values('A00001','admins',2,'2018-2-15',1);
+
+

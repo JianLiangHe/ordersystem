@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="db.properties"></properties>
+	<settings>
+		<!--指定mybatis使用日志组件 -->
+		<setting name="logImpl" value="LOG4J2" />
+	</settings>
+	<typeAliases>
+		<package name="edu.ordersystem.entity" />
+	</typeAliases>
+</configuration>

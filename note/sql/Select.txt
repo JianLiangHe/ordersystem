@@ -1,0 +1,15 @@
+/*
+分页带条件查询用户
+*/
+select * from ordersystem_user where 1=1
+and user_account like '%0%'
+and user_privilege=2
+and user_createtime>='2017-5-1' and user_createtime<='2019-5-2'
+and user_status=1
+limit 0,4;
+
+select COUNT(*) from ordersystem_user where 1=1
+and user_account like '%0%'
+and user_privilege=2
+and user_createtime>='2017-5-1' and user_createtime<='2019-5-2'
+and user_status=1;
