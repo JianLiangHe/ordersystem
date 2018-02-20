@@ -19,4 +19,9 @@ public interface IUserService {
     //分页带条件查询用户
     PageBean findUserForPage(PageBean pageBean,String[] querys);
 
+    //根据no查询用户
+    User findUserByNo(int no);
+
+    //更新用户
+    void updateUser(User user);
 }

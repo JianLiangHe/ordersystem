@@ -61,23 +61,50 @@ public class UserServiceImpl implements IUserService {
     public PageBean findUserForPage(PageBean pageBean, String[] querys) {
         Map map = new HashMap();
         map.put("pageBean",pageBean);
-        /*if(querys!=null&&querys.length>0){
+        if(querys!=null&&querys.length>0){
             if(querys[0]!=null){
                 map.put("account",querys[0]);
             }
             if(querys[1]!=null){
-                map.put("privilege",querys[1]);
+                map.put("status",querys[1]);
             }
             if(querys[2]!=null){
-                map.put("createtime",querys[2]);
+                map.put("startTime",querys[2]);
             }
             if(querys[3]!=null){
-                map.put("status",querys[3]);
+                map.put("endTime",querys[3]);
             }
-        }*/
+        }
         pageBean.setTotalCount(userDao.findUserForPageByCount(map));
         pageBean.setResult(userDao.findUserForPage(map));
         return pageBean;
+    }
+
+    /**
+     * 根据no查询用户
+     * @param no
+     * @return
+     */
+    @Override
+    public User findUserByNo(int no) {
+        try {
+            return userDao.findUserByNo(no);
+        } catch (Exception e) {
+            throw new UserException("该用户不存在.");
+        }
+    }
+
+    /**
+     * 更新用户信息
+     * @param user
+     */
+    @Override
+    public void updateUser(User user) {
+        try {
+            userDao.updateUser(user);
+        } catch (Exception e) {
+            throw new UserException("更新用户失败.");
+        }
     }
 
     public void setUserDao(UserDao userDao) {

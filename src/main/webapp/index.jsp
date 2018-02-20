@@ -13,7 +13,7 @@
     <style rel="stylesheet" type="text/css">
         * {margin: 0;}
 
-        .content {width: 100%; height: 600px; border: 1px solid black;}
+        .content {width: 100%;  border: 1px solid black;}
         .float-left {float: left;}
         .content .content-left {width: 20%; height: 100%;}
         .content .content-right {width: 80%; height: 100%; padding-left: 6px; background: gray;}

@@ -55,6 +55,46 @@ public class UserController {
         return pageBean;
     }
 
+    /**
+     * 处理查询用户详细信息
+     * @param user
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/doFindUserInfo")
+    public ValueDto doFindUserInfo(User user){
+        ValueDto dto = new ValueDto();
+        try {
+            user = userService.findUserByNo(user.getNo());
+            dto.setValue(user);
+        } catch (UserException e) {
+            dto.setCode(400);
+            dto.setMessage(e.getMessage());
+        } finally {
+            return dto;
+        }
+    }
+
+    /**
+     * 处理更新用户信息
+     * @param user
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/doUpdateUser")
+    public ValueDto doUpdateUser(User user){
+        ValueDto dto = new ValueDto();
+        try {
+            userService.updateUser(user);
+            dto.setMessage("更新用户成功.");
+        } catch (UserException e) {
+            dto.setCode(400);
+            dto.setMessage(e.getMessage());
+        } finally {
+            return dto;
+        }
+    }
+
     public void setUserService(IUserService userService) {
         this.userService = userService;
     }
