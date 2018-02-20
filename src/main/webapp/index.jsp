@@ -54,8 +54,8 @@
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="">新增类型</a></li>
-                                <li><a href="">类型列表</a></li>
+                                <li><a href="javascript:loadPage('${pageContext.request.contextPath}/pages/foodType/saveFoodType.jsp');">新增类型</a></li>
+                                <li><a href="javascript:loadPage('${pageContext.request.contextPath}/pages/foodType/foodTypeMain.jsp');">类型列表</a></li>
                             </ul>
                         </div>
                     </div>

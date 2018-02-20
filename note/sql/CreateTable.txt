@@ -30,4 +30,43 @@ values('admins','admins',2,default,1);
 insert into ordersystem_user(user_account,user_password,user_privilege,user_createtime,user_status)
 values('A00001','admins',2,'2018-2-15',1);
 
+/*===========================================================================================*/
+
+/*
+食品类型表(ordersystem_foodtype)
+1. 编号
+2. 名称
+3. 创建时间
+4. 状态
+*/
+drop table if exists ordersystem_foodtype;
+create table ordersystem_foodtype(
+foodtype_no int primary key auto_increment,
+foodtype_name varchar(20) not null unique,
+foodtype_createtime timestamp not null default current_timestamp,
+foodtype_status int not null default 1
+)engine=innodb charset=utf8;
+
+--插入数据
+insert into ordersystem_foodtype(foodtype_name,foodtype_createtime,foodtype_status)
+values('饮料',current_timestamp,1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper用于映射dao的接口，namespace指定Dao接口的完整类名 -->
+<mapper namespace="edu.ordersystem.dao.FoodTypeDao">
+
+    <!-- 建立食品类型映射 -->
+    <resultMap id="foodTypeMap" type="foodType">
+        <id column="foodtype_no" property="no"/>
+        <result column="foodtype_name" property="name"/>
+        <result column="foodtype_createtime" property="createtime"/>
+        <result column="foodtype_status" property="status"/>
+    </resultMap>
+
+</mapper>

@@ -10,6 +10,9 @@ import org.apache.ibatis.annotations.Update;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 处理用户相关数据操作的Dao
+ */
 public interface UserDao {
 
     /**
