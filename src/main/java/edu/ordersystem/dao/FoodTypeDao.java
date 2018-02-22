@@ -4,6 +4,7 @@ import edu.ordersystem.entity.FoodType;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 import java.util.Map;
@@ -45,4 +46,11 @@ public interface FoodTypeDao {
      */
     @Select("SELECT COUNT(*) FROM ordersystem_foodtype")
     int findFoodTypeByCount();
+
+    /**
+     * 更新食品类型状态
+     * @param map
+     */
+    @Update("UPDATE ordersystem_foodtype set foodtype_status=#{statusNum} WHERE foodtype_no=#{no}")
+    void updateFoodTypeStatus(Map map);
 }

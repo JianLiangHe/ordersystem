@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper用于映射dao的接口，namespace指定Dao接口的完整类名 -->
+<mapper namespace="edu.ordersystem.dao.VIPCardDao">
+
+    <!-- 建立VIPCard映射 -->
+    <resultMap id="vipCardMap" type="vIPCard">
+        <id column="vipcard_no" property="no"/>
+        <result column="vipcard_account" property="account"/>
+        <result column="vipcard_password" property="password"/>
+        <result column="vipcard_integral" property="integral"/>
+        <result column="vipcard_usecount" property="useCount"/>
+        <result column="vipcard_createtime" property="createtime"/>
+        <result column="vipcard_status" property="status"/>
+        <result column="vipcard_tel" property="tel"/>
+        <result column="vipcard_email" property="email"/>
+    </resultMap>
+
+</mapper>

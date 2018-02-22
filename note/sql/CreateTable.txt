@@ -52,6 +52,34 @@ insert into ordersystem_foodtype(foodtype_name,foodtype_createtime,foodtype_stat
 values('饮料',current_timestamp,1);
 
 
+/*===========================================================================================*/
+
+/*
+VIP卡表(ordersystem_vipcard)
+1. 编号
+2. 名称
+3. 创建时间
+4. 状态
+*/
+drop table if exists ordersystem_vipcard;
+create table ordersystem_vipcard(
+vipcard_no int primary key auto_increment,
+vipcard_account varchar(20) not null unique check(len(vipcard_account)>=6 and len(vipcard_account<=12)),
+vipcard_password varchar(20) not null default '000000' check(len(vipcard_password)>=6 and len(vipcard_password)<=12),
+vipcard_integral decimal(9,0),
+vipcard_usecount int,
+vipcard_createtime timestamp default current_timestamp,
+vipcard_status int default 1,
+vipcard_tel varchar(20) not null,
+vipcard_email varchar(20) not null
+)engine=innodb charset=utf8;
+
+--插入数据
+insert into ordersystem_vipcard(vipcard_account,vipcard_password,vipcard_integral,vipcard_usecount,vipcard_createtime,vipcard_status,vipcard_tel,vipcard_email)
+values('VIP001','000000',0,0,current_timestamp,1,'13750098002','844131681@qq.com');
+
+
+
 
 
 

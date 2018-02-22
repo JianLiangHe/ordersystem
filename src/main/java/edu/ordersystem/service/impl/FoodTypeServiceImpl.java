@@ -64,6 +64,18 @@ public class FoodTypeServiceImpl implements IFoodTypeService {
         return pageBean;
     }
 
+    @Override
+    public void updateFoodTypeStatus(int no, int statusNum) {
+        try {
+            Map map = new HashMap();
+            map.put("no",no);
+            map.put("statusNum",statusNum);
+            foodTypeDao.updateFoodTypeStatus(map);
+        } catch (Exception e) {
+            throw new UserException("更新食品类型状态失败.");
+        }
+    }
+
     public void setFoodTypeDao(FoodTypeDao foodTypeDao) {
         this.foodTypeDao = foodTypeDao;
     }

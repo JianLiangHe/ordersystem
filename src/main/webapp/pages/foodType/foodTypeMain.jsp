@@ -59,8 +59,11 @@
                     opt += "<td>"+(v.status==1?'启用':'注销')+"</td>";
                     opt += "<td>"+v.createtime.substring(0,10)+"</td>";
                     opt += "<td>";
-                    opt += "<a href=''>详情</a>&nbsp;|&nbsp;";
-                    opt += "<a href=''>更新</a>";
+                    if(v.status==1){
+                        opt += "<a href='javascript:updateFoodTypeStatus("+v.no+",0);'>注销</a>";
+                    }else{
+                        opt += "<a href='javascript:updateFoodTypeStatus("+v.no+",1);'>启用</a>";
+                    }
                     opt += "</td>";
                     opt += "</tr>";
 
@@ -75,6 +78,15 @@
                 opt += "</tr>";
                 $("#tab tbody").append(opt);
             }
+        },"json");
+    }
+
+    //更新食品类型状态
+    function updateFoodTypeStatus(no,statusNum){
+        var url = "${pageContext.request.contextPath}/foodTypeController/doUpdateFoodTypeStatus";
+        var params = {"no":no,"statusNum":statusNum};
+        $.get(url,params,function(data){
+            loadData();
         },"json");
     }
 </script>

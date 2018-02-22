@@ -17,4 +17,7 @@ public interface IFoodTypeService {
     //分页查询食品类型
     PageBean findFoodTypeForPage(PageBean pageBean);
 
+    //更新食品类型状态
+    void updateFoodTypeStatus(int no,int statusNum);
+
 }

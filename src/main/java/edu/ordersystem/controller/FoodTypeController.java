@@ -53,6 +53,26 @@ public class FoodTypeController {
         return foodTypeService.findFoodTypeForPage(pageBean);
     }
 
+    /**
+     * 处理更新食品类型状态的请求
+     * @param foodType
+     * @param statusNum
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/doUpdateFoodTypeStatus")
+    public ValueDto doUpdateFoodTypeStatus(FoodType foodType,int statusNum){
+        ValueDto dto = new ValueDto();
+        try {
+            foodTypeService.updateFoodTypeStatus(foodType.getNo(),statusNum);
+        } catch (UserException e) {
+            dto.setCode(400);
+            dto.setMessage(e.getMessage());
+        } finally {
+            return dto;
+        }
+    }
+
     public void setFoodTypeService(IFoodTypeService foodTypeService) {
         this.foodTypeService = foodTypeService;
     }

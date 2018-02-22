@@ -72,7 +72,8 @@
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="">新增优惠</a></li>
+                                <li><a href="javascript:loadPage('${pageContext.request.contextPath}/pages/preferential/saveVIPCard.jsp');">新增VIP卡</a></li>
+                                <li><a href="">新增优惠卷</a></li>
                                 <li><a href="">优惠列表</a></li>
                             </ul>
                         </div>
